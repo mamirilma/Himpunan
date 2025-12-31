@@ -1,0 +1,355 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a1128 0%, #0d1b3a 25%, #11182A 50%, #0a1128 100%);
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            background-color: rgba(17, 24, 42, 0.7);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(52, 152, 219, 0.3);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 1.5rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #3498db;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 2rem;
+            max-width: 1200px;
+        }
+
+        .main-section-container {
+            line-height: 3.5rem;
+            margin-top: 8rem;
+            margin-bottom: 12rem;
+        }
+
+        .img-style {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .main-section {
+            font-size: 5rem;
+            color: white;
+            margin-top: 3rem;
+        }
+
+        .main-section-2 {
+            font-size: 3rem;
+            color: white;
+            line-height: normal;
+        }
+
+        .main-section-3 {
+            font-size: 1.5rem;
+            color: #3498db;
+            line-height: normal;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: white;
+            font-size: 2rem;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: rgba(17, 24, 42, 0.7);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+            border-color: rgba(52, 152, 219, 0.6);
+        }
+
+        .card-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.5s;
+            filter: brightness(0.9);
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.05);
+            filter: brightness(1);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-text {
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .card-text:hover {
+            color: #3498db;
+        }
+
+        .card-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .card-btn:hover {
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(90deg, #5dade2, #3498db);
+        }
+
+        .card:first-child .card-content {
+            padding-top: 2rem;
+        }
+
+        /* Materi Section */
+        .materi-section {
+            margin-top: 3rem;
+        }
+
+        .materi-list {
+            background-color: rgba(17, 24, 42, 0.7);
+            border-radius: 12px;
+            padding: 2rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .materi-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(52, 152, 219, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .materi-item:hover {
+            transform: translateX(5px);
+        }
+
+        .materi-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .materi-title {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .materi-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+        }
+
+        .materi-desc {
+            color: #bdc3c7;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background-color: rgba(17, 24, 42, 0.9);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(52, 152, 219, 0.3);
+        }
+
+        @media (max-width: 768px) {
+
+        .nav-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .nav-menu {
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-item {
+            margin: 0.5rem;
+        }
+
+        .main-section-container {
+            margin-top: 4rem;
+            margin-bottom: 6rem;
+            line-height: 2.5rem;
+            text-align: center;
+        }
+
+        .main-section {
+            font-size: 3rem;
+        }
+
+        .main-section-2 {
+            font-size: 2rem;
+        }
+
+        .main-section-3 {
+            font-size: 1.1rem;
+        }
+
+        .card-container {
+            grid-template-columns: 1fr;
+        }
+
+        .card-img {
+            height: 180px;
+        }
+
+        .container {
+            padding: 1rem;
+        }
+    }
+
+        @media (max-width: 480px) {
+
+        .logo {
+            font-size: 1.2rem;
+        }
+
+        .main-section-container {
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .main-section {
+            font-size: 2.2rem;
+        }
+
+        .main-section-2 {
+            font-size: 1.6rem;
+        }
+
+        .main-section-3 {
+            font-size: 1rem;
+        }
+
+        .card-img {
+            height: 150px;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+        }
+
+        .materi-title {
+            font-size: 1.2rem;
+        }
+
+        .materi-desc {
+            font-size: 0.95rem;
+        }
+
+        .footer {
+            padding: 1.5rem 1rem;
+            font-size: 0.85rem;
+        }
+    }

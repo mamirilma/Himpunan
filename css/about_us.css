@@ -1,0 +1,175 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a1128 0%, #0d1b3a 25%, #11182A 50%, #0a1128 100%);
+            min-height: 100vh;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .navbar {
+            background-color: rgba(17, 24, 42, 0.95);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(52, 152, 219, 0.3);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 1.5rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #3498db;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 2rem;
+            max-width: 1200px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: white;
+            font-size: 2rem;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .founder-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .anggota-card {
+            background-color: rgba(17, 24, 42, 0.85);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            backdrop-filter: blur(5px);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .anggota-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+            border-color: rgba(52, 152, 219, 0.6);
+        }
+
+        .anggota-img {
+            width: 55%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(52, 152, 219, 0.3);
+        }
+
+        .konten-anggota {
+            padding: 1.5rem;
+        }
+
+        .nama-anggota {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .anggota-npm {
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background-color: rgba(17, 24, 42, 0.9);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(52, 152, 219, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .nav-menu {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-item {
+                margin: 0.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .founder-container {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }

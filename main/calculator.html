@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator | Himpunan</title>
+    <link rel="stylesheet" href="../css/calculator.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Himpunan</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Calculator</a></li>
+                <li class="nav-item"><a href="Latihan.html" class="nav-link">Latihan Soal</a></li>
+                <li class="nav-item"><a href="about_us.html" class="nav-link">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section id="calculator">
+            <h2 class="section-title">Kalkulator Himpunan</h2>
+            
+            <div class="calculator-container">
+                <div class="input-group">
+                    <label class="input-label" for="setA">Himpunan A (pisahkan dengan koma)</label>
+                    <input type="text" id="setA" class="set-input" placeholder="Contoh: 1, 2, 3, 4, 5">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="setB">Himpunan B (pisahkan dengan koma)</label>
+                    <input type="text" id="setB" class="set-input" placeholder="Contoh: 3, 4, 5, 6, 7">
+                </div>
+                
+                <div class="operation-buttons">
+                    <button class="operation-btn" onclick="calculateUnion()">Gabungan (A ∪ B)</button>
+                    <button class="operation-btn" onclick="calculateIntersection()">Irisan (A ∩ B)</button>
+                    <button class="operation-btn" onclick="calculateDifferenceAB()">Selisih (A - B)</button>
+                    <button class="operation-btn" onclick="calculateDifferenceBA()">Selisih (B - A)</button>
+                    <button class="operation-btn" onclick="calculateComplement()">Komplemen</button>
+                    <button class="operation-btn" onclick="calculateCartesian()">Perkalian Kartesian</button>
+                    <button class="operation-btn" onclick="checkSubset()">Cek Subhimpunan</button>
+                    <button class="operation-btn" onclick="checkEqual()">Cek Kesamaan</button>
+                </div>
+                
+                <div class="result-section">
+                    <h3 class="result-title">Hasil Perhitungan</h3>
+                    <div class="result-content" id="result">
+                        Hasil akan ditampilkan di sini...
+                    </div>
+                </div>
+            </div>
+            
+            <div class="instructions">
+                <h3>Petunjuk Penggunaan</h3>
+                <ul>
+                    <li>Masukkan elemen himpunan A dan B dengan dipisahkan koma (contoh: 1, 2, 3)</li>
+                    <li>Untuk himpunan kosong, biarkan kolom input kosong</li>
+                    <li>Untuk himpunan dengan elemen string, gunakan tanda petik (contoh: 'a', 'b', 'c')</li>
+                    <li>Klik tombol operasi yang diinginkan untuk melihat hasil</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Kelompok_2. Semua hak cipta dilindungi.</p>
+    </footer>
+
+    <script src="../js/calculator.js"></script>
+</body>
+</html>
